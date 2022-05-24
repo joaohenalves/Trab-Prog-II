@@ -11,7 +11,7 @@ try {
 
 ?>
 
-<div class="buttons-container centralize-elements">
+<div class="default-container centralize-elements">
     <a href="index.php?p=exercicio9"><button class="centralize-elements">
         <div class="inner-button centralize-elements">Exercício 9</div>
     </button></a>
@@ -19,11 +19,11 @@ try {
         <div class="inner-button centralize-elements">Exercício 11</div>
     </button></a>
 </div>
-<div class="main-desc">
+<div class="default-container">
     <h3>Exercício 10</h3>
     <p>Lista todos os usuários existentes no banco de dados.</p>
 </div>
-<div class="result-container">
+<div class="default-container">
     <h3>Resultados:</h3>
     <?php
 

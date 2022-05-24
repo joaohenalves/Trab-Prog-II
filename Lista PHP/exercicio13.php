@@ -22,6 +22,8 @@ try {
         } else {
             $message = 'Editando o usuário: ' . $resultado['nome'] . ' - Email: ' . $resultado['email'];
         }
+    } else {
+        $_GET['id'] = '';
     }
 } catch (PDOException $e) {
     echo 'Erro ao realizar comando: ' . $e->getMessage();
@@ -30,7 +32,7 @@ try {
 
 ?>
 
-<div class="buttons-container centralize-elements">
+<div class="default-container centralize-elements">
     <a href="index.php?p=exercicio12"><button class="centralize-elements">
         <div class="inner-button centralize-elements">Exercício 12</div>
     </button></a>
@@ -38,7 +40,7 @@ try {
         <div class="inner-button centralize-elements">Exercício 14</div>
     </button></a>
 </div>
-<div class="main-desc">
+<div class="default-container">
     <h3>Exercício 13</h3>
     <p>Recebe um ID via GET e atualiza as informações do usuário.</p>
 </div>
@@ -51,27 +53,27 @@ try {
     
 ?>
 
-<div class="login-wrapper">
-<div class="centralize-elements login-box">
-    <form action="index.php?p=exercicio13&id=<?=$_GET['id']?>" method="POST">
-        <label>Novo Nome</label>
-        <input type="text" name="nome">
-        <label>Novo Email</label>
-        <input type="email" name="email">
-        <label>Nova Senha</label>
-        <input type="password" name="senha">
-        <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-            <div class="inner-button centralize-elements">Atualizar</div>
-        </button>
-    </form>
-</div>
+<div class="default-container centralize-elements">
+    <div class="login-wrapper centralize-elements">
+        <form action="index.php?p=exercicio13&id=<?=$_GET['id']?>" method="POST">
+            <label>Novo Nome</label>
+            <input type="text" name="nome">
+            <label>Novo Email</label>
+            <input type="email" name="email">
+            <label>Nova Senha</label>
+            <input type="password" name="senha">
+            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
+                <div class="inner-button centralize-elements">Atualizar</div>
+            </button>
+        </form>
+    </div>
 </div>
 
 <?php
 
 if (isset($message2)) {
     echo '
-        <div class="result-container">
+        <div class="default-container">
             <h3>' . $message2 . '</h3>
         </div>
     ';

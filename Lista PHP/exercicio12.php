@@ -19,7 +19,7 @@ if(isset($_POST['dominio']) && strlen($_POST['dominio']) > 0) {
 
 ?>
 
-<div class="buttons-container centralize-elements">
+<div class="default-container centralize-elements">
     <a href="index.php?p=exercicio11"><button class="centralize-elements">
         <div class="inner-button centralize-elements">Exercício 11</div>
     </button></a>
@@ -27,17 +27,17 @@ if(isset($_POST['dominio']) && strlen($_POST['dominio']) > 0) {
         <div class="inner-button centralize-elements">Exercício 13</div>
     </button></a>
 </div>
-<div class="main-desc">
+<div class="default-container">
     <h3>Exercício 12</h3>
     <p>Apaga os usuários que possuem email pertencente ao domínio informado.</p>
 </div>
-<div class="login-wrapper">
-<div class="centralize-elements login-box">
+<div class="default-container centralize-elements">
+<div class="login-wrapper centralize-elements">
     <form action="index.php?p=exercicio12" method="POST">
-        <label>Dominio</label>
+        <label>Domínio</label>
         <input type="text" name="dominio">
         <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-            <div class="inner-button centralize-elements">Buscar</div>
+            <div class="inner-button centralize-elements">Deletar</div>
         </button>
     </form>
 </div>
@@ -47,7 +47,7 @@ if(isset($_POST['dominio']) && strlen($_POST['dominio']) > 0) {
 
 if (isset($message)) {
     echo '
-        <div class="result-container" style="margin-top: -100px">
+        <div class="default-container" style="margin-top: -100px">
             <h3>' . $message . '</h3>
     ';
     if (count($resultado) > 0) {

@@ -19,7 +19,7 @@ if(isset($_POST['email']) && strlen($_POST['email']) != 0) {
 
 ?>
 
-<div class="buttons-container centralize-elements">
+<div class="default-container centralize-elements">
     <a href="index.php?p=exercicio10"><button class="centralize-elements">
         <div class="inner-button centralize-elements">Exercício 10</div>
     </button></a>
@@ -27,12 +27,12 @@ if(isset($_POST['email']) && strlen($_POST['email']) != 0) {
         <div class="inner-button centralize-elements">Exercício 12</div>
     </button></a>
 </div>
-<div class="main-desc">
+<div class="default-container">
     <h3>Exercício 11</h3>
     <p>Busca informações do usuário cujo email e igual ao email informado.</p>
 </div>
-<div class="login-wrapper">
-<div class="centralize-elements login-box">
+<div class="default-container centralize-elements">
+<div class="login-wrapper centralize-elements">
     <form action="index.php?p=exercicio11" method="POST">
         <label>Email</label>
         <input type="email" name="email">

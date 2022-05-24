@@ -27,7 +27,7 @@ if(isset($_POST['dominio'])) {
 
 ?>
 
-<div class="buttons-container centralize-elements">
+<div class="default-container centralize-elements">
     <a href="index.php?p=exercicio13"><button class="centralize-elements">
         <div class="inner-button centralize-elements">Exercício 13</div>
     </button></a>
@@ -35,14 +35,14 @@ if(isset($_POST['dominio'])) {
         <div class="inner-button centralize-elements">Exercício 15</div>
     </button></a>
 </div>
-<div class="main-desc">
+<div class="default-container">
     <h3>Exercício 14</h3>
     <p>Faz a soma dos IDs dos usuários que possuem email pertencente ao domínio informado.</p>
 </div>
-<div class="login-wrapper">
-<div class="centralize-elements login-box">
+<div class="default-container centralize-elements">
+<div class="login-wrapper centralize-elements">
     <form action="index.php?p=exercicio14" method="POST">
-        <label>Dominio</label>
+        <label>Domínio</label>
         <input type="text" name="dominio">
         <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
             <div class="inner-button centralize-elements">Buscar</div>
