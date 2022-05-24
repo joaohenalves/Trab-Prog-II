@@ -59,8 +59,10 @@
         </style>
     </head>
     <body>
-        <a href="exercicio8.html"><div class="exc-button" style="left: calc(50% - 105px)">Exercício 8</div></a>
-        <a href="exercicio10.html"><div class="exc-button" style="left: calc(50% + 5px)">Exercício 10</div></a>
+        <div class="exc-buttons-cont center">
+            <a href="exercicio8.html"><div class="exc-button center">Exercício 8</div></a>
+            <a href="exercicio10.html"><div class="exc-button center">Exercício 10</div></a>
+        </div>
         <div class="title-text common">Informações carregadas via AJAX</div>
         <div id="stop-button" class="common" onclick="controlaCicloAjax()">Parar</div>
         <div id="geral"></div>

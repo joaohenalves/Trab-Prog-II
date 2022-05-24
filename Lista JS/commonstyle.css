@@ -1,23 +1,42 @@
 * {
     margin: 0px;
+    text-decoration: none;
 }
 
 body {
     background-color: #222222;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.default-container {
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    height: fit-content;
+}
+
+.exc-buttons-cont {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 75px);
+    padding: 10px 0px 10px 0px;
+    height: fit-content;
+    width: 140px;
+}
+
 .exc-button {
     width: 100px;
     height: 20px;
-    position: fixed;
     background-color: rgb(0, 89, 255);
     color: white;
     font-family: Arial;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: solid 1px white;
     border-radius: 2px;
-    top: 10px;
+    margin: 0px 10px 0px 10px;
 }

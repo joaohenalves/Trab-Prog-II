@@ -59,8 +59,10 @@
         </style>
     </head>
     <body>
-        <a href="exercicio4.html"><div class="exc-button" style="left: calc(50% - 105px)">Exercício 4</div></a>
-        <a href="exercicio6.php"><div class="exc-button" style="left: calc(50% + 5px)">Exercício 6</div></a>
+        <div class="exc-buttons-cont center">
+            <a href="exercicio4.html"><div class="exc-button center">Exercício 4</div></a>
+            <a href="exercicio6.php"><div class="exc-button center">Exercício 6</div></a>
+        </div>
         <div class="title-text common">Chat</div>
         <div id="gtalk"></div>
         <script>

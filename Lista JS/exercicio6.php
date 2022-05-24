@@ -115,8 +115,10 @@
         </style>
     </head>
     <body>
-        <a href="exercicio5.php"><div class="exc-button" style="left: calc(50% - 105px)">Exercício 5</div></a>
-        <a href="exercicio7.html"><div class="exc-button" style="left: calc(50% + 5px)">Exercício 7</div></a>
+        <div class="exc-buttons-cont center">
+            <a href="exercicio5.php"><div class="exc-button center">Exercício 5</div></a>
+            <a href="exercicio7.html"><div class="exc-button center">Exercício 7</div></a>
+        </div>
         <div class="centraliza" id="compose-button" onclick="mostraNewMessage()">Compose</div>
         <div id="new-message">
             <div id="new-message-header">

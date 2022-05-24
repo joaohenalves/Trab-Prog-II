@@ -13,12 +13,9 @@
                 font-family: Arial;
                 color: rgb(255, 187, 0);
                 font-size: 25px;
-                border-style: solid;
-                border-color: rgb(255, 187, 0);
+                outline: 3px solid rgb(255, 187, 0);
+                outline-offset: -3px;
                 position: absolute;
-                display: flex;
-                text-align: center;
-                align-items: center;
             }
             .quadradinho {
                 height: 25px;
@@ -28,12 +25,15 @@
                 position: absolute;
                 cursor: pointer;
             }
+
         </style>
     </head>
     <body>
-        <a href="exercicio1.html"><div class="exc-button" style="left: calc(50% - 105px)">Exercício 1</div></a>
-        <a href="exercicio3.html"><div class="exc-button" style="left: calc(50% + 5px)">Exercício 3</div></a>
-        <div id="quadrado">Clique em algum dos cantos!
+        <div class="exc-buttons-cont center">
+            <a href="exercicio1.html"><div class="exc-button center">Exercício 1</div></a>
+            <a href="exercicio3.html"><div class="exc-button center">Exercício 3</div></a>
+        </div>
+        <div id="quadrado" class="center">Clique em algum dos cantos!
             <div class="quadradinho" onclick="deslocaQuadrado(1)" style="top: 5px; left: 5px"></div>
             <div class="quadradinho" onclick="deslocaQuadrado(2)" style="top: 5px; right: 5px"></div>
             <div class="quadradinho" onclick="deslocaQuadrado(3)" style="bottom: 5px; right: 5px"></div>
@@ -42,22 +42,15 @@
         <script>
             function deslocaQuadrado(canto) {
                 var el = document.getElementById('quadrado');
-                el.style.cssText = 'top: initial; left: initial; bottom: initial; right: initial;';
-                if(canto == 1) {
+                if(canto == 1 || canto == 4) {
                     el.style.left = '0';
+                } else {
+                    el.style.left = 'calc(100% - 200px)';
+                }
+                if(canto == 1 || canto == 2) {
                     el.style.top = '0';
-                }
-                if(canto == 2) {
-                    el.style.right = '0';
-                    el.style.top = '0';
-                }
-                if(canto == 3) {
-                    el.style.right = '0';
-                    el.style.bottom = '0';
-                }
-                if(canto == 4) {
-                    el.style.left = '0';
-                    el.style.bottom = '0';
+                } else {
+                    el.style.top = 'calc(100% - 200px)'
                 }
             }
         </script>

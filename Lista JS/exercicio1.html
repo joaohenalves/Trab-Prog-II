@@ -10,14 +10,12 @@
                 width: 200px;
                 height: 200px;
                 background-color: rgb(255, 187, 0);
-                display: flex;
-                align-items: center;
-                text-align: center;
                 color: #222222;
                 font-size: 40px;
                 position: absolute;
                 font-family: Arial;
                 border-radius: 5px;
+                transition: background-color 0.5s, color 0.5s;
             }
             #quadrado:hover {
                 background-color: #222222;
@@ -30,8 +28,10 @@
         </style>
     </head>
     <body>
-        <a href="exercicio2.html"><div class="exc-button" style="left: calc(50% - 50px)">Exercício 2</div></a>
-        <div id="quadrado" onclick="deslocaParaOLado()">Clique para mover!</div>
+        <div class="exc-buttons-cont center">
+            <a href="exercicio2.html"><div class="exc-button center" style="left: calc(50% - 50px)">Exercício 2</div></a>
+        </div>
+        <div id="quadrado" class="center" onclick="deslocaParaOLado()">Clique para mover!</div>
         <script>
             function deslocaParaOLado() {
                 var el = document.getElementById('quadrado');
