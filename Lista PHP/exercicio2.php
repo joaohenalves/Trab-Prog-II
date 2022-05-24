@@ -47,9 +47,11 @@ if(isset($_POST['email']) && isset($_POST['senha'])) {
             <input type="email" name="email">
             <label>Senha</label>
             <input type="password" name="senha">
-            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-                <div class="inner-button centralize-elements">Buscar</div>
-            </button>
+            <div class="centralize-elements">
+                <button type="submit" class="centralize-elements">
+                    <div class="inner-button centralize-elements">Buscar</div>
+                </button>
+            </div>
         </form>
     </div>
 </div>
@@ -59,7 +61,7 @@ if(isset($_POST['email']) && isset($_POST['senha'])) {
 if (isset($id)) {
     echo '
         <div class="default-container">
-            <h3>Usuário retornado:</h3>
+            <p>Usuário retornado:</p>
             <p>' . $id . '</p>
         </div>
     ';

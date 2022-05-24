@@ -30,7 +30,7 @@ try {
 
         if (count($resultado) > 0) {
             foreach($resultado as $linha) {
-                echo '<p><a href="index.php?p=exercicio13&id=' . $linha['id'] . '">' . $linha['nome'] . '</a> (' . $linha['email'] . ')</p>';
+                echo '<p><a class="dec" href="index.php?p=exercicio13&id=' . $linha['id'] . '">' . $linha['nome'] . '</a> (' . $linha['email'] . ')</p>';
             }
         } else {
             echo '<p>Nenhum usuário encontrado</p>';

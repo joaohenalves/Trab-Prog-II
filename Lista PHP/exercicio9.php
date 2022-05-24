@@ -54,9 +54,11 @@ if(isset($_POST['email']) && isset($_POST['senha'])) {
             <input type="email" name="email">
             <label>Senha</label>
             <input type="password" name="senha">
-            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-                <div class="inner-button centralize-elements">Login</div>
-            </button>
+            <div class="centralize-elements">
+                <button type="submit" class="centralize-elements">
+                    <div class="inner-button centralize-elements">Login</div>
+                </button>
+            </div>
         </form>
     </div>
 </div>
@@ -66,13 +68,13 @@ if(isset($_POST['email']) && isset($_POST['senha'])) {
 if (isset($message)) {
     echo '
         <div class="default-container">
-            <h3>' . $message . '</h3>
+            <p>' . $message . '</p>
         </div>
     ';
 } else if(isset($_GET['erro'])) {
     echo '
     <div class="default-container">
-        <h3>Erro! Usuário e/ou senha informados não existem!</h3>
+        <p>Erro! Usuário e/ou senha informados não existem!</p>
     </div>
 ';
 }

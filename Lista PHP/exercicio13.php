@@ -43,13 +43,13 @@ try {
 <div class="default-container">
     <h3>Exercício 13</h3>
     <p>Recebe um ID via GET e atualiza as informações do usuário.</p>
-    <p>Este exercício está integrado com o exercício 10, que pode ser acessado <a href="index.php?p=exercicio10">aqui.</a></p>
+    <p>Este exercício está integrado com o exercício 10, que pode ser acessado <a class="dec" href="index.php?p=exercicio10">aqui.</a></p>
 </div>
 
 <?php 
 
     if(isset($resultado)) {
-        echo '<h3 style="margin-top: 20px; margin-bottom: 20px; color: white; font-family: Arial">' . $message . '</h3>';
+        echo '<p>' . $message . '</p>';
     }
     
 ?>
@@ -63,9 +63,11 @@ try {
             <input type="email" name="email">
             <label>Nova Senha</label>
             <input type="password" name="senha">
-            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-                <div class="inner-button centralize-elements">Atualizar</div>
-            </button>
+            <div class="centralize-elements">
+                <button type="submit" class="centralize-elements">
+                    <div class="inner-button centralize-elements">Atualizar</div>
+                </button>
+            </div>
         </form>
     </div>
 </div>
@@ -75,7 +77,7 @@ try {
 if (isset($message2)) {
     echo '
         <div class="default-container">
-            <h3>' . $message2 . '</h3>
+            <p>' . $message2 . '</p>
         </div>
     ';
 }

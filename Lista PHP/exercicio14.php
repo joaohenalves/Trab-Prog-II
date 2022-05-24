@@ -44,9 +44,11 @@ if(isset($_POST['dominio'])) {
         <form action="index.php?p=exercicio14" method="POST">
             <label>Domínio</label>
             <input type="text" name="dominio">
-            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-                <div class="inner-button centralize-elements">Buscar</div>
-            </button>
+            <div class="centralize-elements">
+                <button type="submit" class="centralize-elements">
+                    <div class="inner-button centralize-elements">Buscar</div>
+                </button>
+            </div>
         </form>
     </div>
 </div>
@@ -55,8 +57,8 @@ if(isset($_POST['dominio'])) {
 
 if (isset($soma)) {
     echo '
-        <div class="result-container" style="margin-top: -100px">
-            <h3>Resultado da soma:</h3>
+        <div class="result-container">
+            <p>Resultado da soma:</p>
             <p>' . $soma . '</p>
         </div>
     ';

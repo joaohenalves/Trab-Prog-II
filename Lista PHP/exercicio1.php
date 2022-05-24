@@ -9,19 +9,20 @@ if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])) {
             $comando->bindParam(':insertEmail', $_POST['email']);
             $comando->bindParam(':insertSenha', $senhaCript);
             $comando->execute();
+            $message = 'Usuário cadastrado com sucesso!';
         } catch (PDOException $e) {
             echo 'Erro ao executar comando no banco de dados: ' . $e->getMessage();
             exit();
         }
     } else {
-        echo 'Dados com tamanhos inválidos!';
+        $message = 'Dados com tamanhos inválidos!';
     }
 }
 
 ?>
 
 <div class="default-container centralize-elements">
-    <a href="index.php"><button class="centralize-elements">
+    <a href="index.php?p=home"><button class="centralize-elements">
         <div class="inner-button centralize-elements">Home</div>
     </button></a>
     <a href="index.php?p=exercicio2"><button class="centralize-elements">
@@ -41,9 +42,23 @@ if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])) {
             <input type="email" name="email">
             <label>Senha</label>
             <input type="password" name="senha">
-            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-                <div class="inner-button centralize-elements">Cadastrar</div>
-            </button>
+            <div class="centralize-elements">
+                <button type="submit" class="centralize-elements">
+                    <div class="inner-button centralize-elements">Cadastrar</div>
+                </button>
+            </div>
         </form>
     </div>
 </div>
+
+<?php
+
+if (isset($message)) {
+    echo '
+        <div class="default-container">
+            <p>' . $message . '</p>
+        </div>
+    ';
+}
+
+?>

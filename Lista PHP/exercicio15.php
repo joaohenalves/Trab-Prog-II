@@ -41,9 +41,11 @@ if(isset($_POST['nome']) && isset($_POST['idMin']) && isset($_POST['idMax'])) {
             <input type="text" name="idMin">
             <label>ID max</label>
             <input type="text" name="idMax">
-            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-                <div class="inner-button centralize-elements">Atualizar</div>
-            </button>
+            <div class="centralize-elements">
+                <button type="submit" class="centralize-elements">
+                    <div class="inner-button centralize-elements">Atualizar</div>
+                </button>
+            </div>
         </form>
     </div>
 </div>
@@ -53,7 +55,7 @@ if(isset($_POST['nome']) && isset($_POST['idMin']) && isset($_POST['idMax'])) {
 if (isset($message)) {
     echo '
         <div class="default-container">
-            <h3>' . $message . '</h3>
+            <p>' . $message . '</p>
         </div>
     ';
 }

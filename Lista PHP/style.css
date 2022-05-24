@@ -2,6 +2,7 @@
     margin: 0px;
     color:white;
     font-family: Arial;
+    text-decoration: none;
 }
 
 p, h3, h2 {
@@ -11,6 +12,10 @@ p, h3, h2 {
 
 body {
     background-color: #111111;
+}
+
+.dec {
+    text-decoration: underline;
 }
 
 .centralize-elements {
@@ -45,7 +50,6 @@ body {
 }
 
 button {
-    all: unset;
     background: linear-gradient(135deg, #723300 0%, red 50%, purple 100%);
     width: 130px;
     height: 45px;
@@ -54,6 +58,7 @@ button {
     border-radius: 2px;
     margin-left: 10px;
     margin-right: 10px;
+    border: none;
 }
 
 .inner-button {
@@ -62,7 +67,6 @@ button {
     height: 35px;
     background-color: rgb(25,25,25);
     border-radius: 2px;
-    position: absolute;
 }
 
 button:hover {
@@ -70,7 +74,6 @@ button:hover {
 }
 
 .login-wrapper {
-    display: block;
     height: fit-content;
     width: 300px;
 }
@@ -78,6 +81,8 @@ button:hover {
 .login-wrapper input{
     height: 30px;
     width: 280px;
+    color: black;
+    font-size: 15px;
 }
 
 .login-wrapper *{

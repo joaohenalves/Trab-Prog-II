@@ -50,9 +50,11 @@ if(isset($_POST['id']) && isset($_POST['nome']) && isset($_POST['email']) && iss
             <input type="email" name="email">
             <label>Nova Senha</label>
             <input type="password" name="senha">
-            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-                <div class="inner-button centralize-elements">Atualizar</div>
-            </button>
+            <div class="centralize-elements">
+                <button type="submit" class="centralize-elements">
+                    <div class="inner-button centralize-elements">Atualizar</div>
+                </button>
+            </div>
         </form>
     </div>
 </div>
@@ -61,8 +63,8 @@ if(isset($_POST['id']) && isset($_POST['nome']) && isset($_POST['email']) && iss
 
 if (isset($message)) {
     echo '
-        <div class="result-container" style="margin-top: 100px">
-            <h3>' . $message . '</h3>
+        <div class="result-container">
+            <p>' . $message . '</p>
         </div>
     ';
 }

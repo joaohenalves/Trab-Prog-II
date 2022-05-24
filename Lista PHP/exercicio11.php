@@ -29,16 +29,18 @@ if(isset($_POST['email']) && strlen($_POST['email']) != 0) {
 </div>
 <div class="default-container">
     <h3>Exercício 11</h3>
-    <p>Busca informações do usuário cujo email e igual ao email informado.</p>
+    <p>Busca informações do usuário cujo email é igual ao email informado.</p>
 </div>
 <div class="default-container centralize-elements">
     <div class="login-wrapper centralize-elements">
         <form action="index.php?p=exercicio11" method="POST">
             <label>Email</label>
             <input type="email" name="email">
-            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-                <div class="inner-button centralize-elements">Buscar</div>
-            </button>
+            <div class="centralize-elements">
+                <button type="submit" class="centralize-elements">
+                    <div class="inner-button centralize-elements">Buscar</div>
+                </button>
+            </div>
         </form>
     </div>
 </div>
@@ -47,8 +49,8 @@ if(isset($_POST['email']) && strlen($_POST['email']) != 0) {
 
 if (isset($message)) {
     echo '
-        <div class="result-container" style="margin-top: -100px">
-            <h3>' . $message . '</h3>
+        <div class="default-container">
+            <p>' . $message . '</p>
     ';
     if (count($resultado) > 0) {
         foreach($resultado as $linha) {
