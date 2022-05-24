@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 4</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="commonstyle.css">
+        <style>
+
+            #alvo {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                background-color: rgb(255, 187, 0);
+                top: 0%;
+                left: 0%;
+            }
+        
+            #link {
+                width: 140px;
+                height: 75px;
+                background-color: rgb(255, 187, 0);
+                color: #222222;
+                border-radius: 5px;
+                font-size: 30px;
+                font-weight: bold;
+                font-family: Arial;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 60px;
+                left: calc(50% - 75px);
+                cursor: pointer;
+            }
+
+            #link:hover {
+                background-color: #222222;
+                color: rgb(255, 187, 0);
+                border-style: solid;
+                border-color: rgb(255, 187, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <a href="exercicio3.html"><div class="exc-button" style="left: calc(50% - 105px)">Exercício 3</div></a>
+        <a href="exercicio5.php"><div class="exc-button" style="left: calc(50% + 5px)">Exercício 5</div></a>
+        <div id="link" onclick="iniciaMovimento()">Mover</div>
+        <div id="alvo"></div>
+        <script>
+
+            var leftPx = 0;
+            var topPx = 0;
+            var finalLargura = window.innerWidth - 200;
+            var finalAltura = window.innerHeight - 200;
+            var passoLargura = finalLargura / 100 - 0.001; //(- 0.001) -> Gambiarra para contornar a imprecisão do javascript
+            var passoAltura =  finalAltura / 100 - 0.001;
+    
+            var el = document.getElementById('alvo');
+    
+            function iniciaMovimento() {
+                controle = setInterval(moveAlvo, 50);
+            }
+    
+            function moveAlvo() {
+                if(finalLargura - leftPx <= passoLargura || finalAltura - topPx <= passoAltura) {
+                    clearInterval(controle);
+                } else {
+                    leftPx += passoLargura;
+                    topPx += passoAltura;
+                    el.style.top = `${topPx}px`;
+                    el.style.left = `${leftPx}px`;
+                }
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 1</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="commonstyle.css">
+        <style>
+
+            #quadrado {
+                width: 200px;
+                height: 200px;
+                background-color: rgb(255, 187, 0);
+                display: flex;
+                align-items: center;
+                text-align: center;
+                color: #222222;
+                font-size: 40px;
+                position: absolute;
+                font-family: Arial;
+                border-radius: 5px;
+            }
+            #quadrado:hover {
+                background-color: #222222;
+                color: rgb(255, 187, 0);
+                outline: 5px solid rgb(255, 187, 0);
+                outline-offset: -5px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a href="exercicio2.html"><div class="exc-button" style="left: calc(50% - 50px)">Exercício 2</div></a>
+        <div id="quadrado" onclick="deslocaParaOLado()">Clique para mover!</div>
+        <script>
+            function deslocaParaOLado() {
+                var el = document.getElementById('quadrado');
+                el.style.right = '0';
+            }
+        </script>
+    </body>
+</html>

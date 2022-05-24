@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 2</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="commonstyle.css">
+        <style>
+
+            #quadrado {
+                width: 200px;
+                height: 200px;
+                background-color: #222222;
+                font-family: Arial;
+                color: rgb(255, 187, 0);
+                font-size: 25px;
+                border-style: solid;
+                border-color: rgb(255, 187, 0);
+                position: absolute;
+                display: flex;
+                text-align: center;
+                align-items: center;
+            }
+            .quadradinho {
+                height: 25px;
+                width: 25px;
+                border-style: solid;
+                border-color: rgb(255, 187, 0);
+                position: absolute;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="exercicio1.html"><div class="exc-button" style="left: calc(50% - 105px)">Exercício 1</div></a>
+        <a href="exercicio3.html"><div class="exc-button" style="left: calc(50% + 5px)">Exercício 3</div></a>
+        <div id="quadrado">Clique em algum dos cantos!
+            <div class="quadradinho" onclick="deslocaQuadrado(1)" style="top: 5px; left: 5px"></div>
+            <div class="quadradinho" onclick="deslocaQuadrado(2)" style="top: 5px; right: 5px"></div>
+            <div class="quadradinho" onclick="deslocaQuadrado(3)" style="bottom: 5px; right: 5px"></div>
+            <div class="quadradinho" onclick="deslocaQuadrado(4)" style="bottom: 5px; left: 5px"></div>
+        </div>
+        <script>
+            function deslocaQuadrado(canto) {
+                var el = document.getElementById('quadrado');
+                el.style.cssText = 'top: initial; left: initial; bottom: initial; right: initial;';
+                if(canto == 1) {
+                    el.style.left = '0';
+                    el.style.top = '0';
+                }
+                if(canto == 2) {
+                    el.style.right = '0';
+                    el.style.top = '0';
+                }
+                if(canto == 3) {
+                    el.style.right = '0';
+                    el.style.bottom = '0';
+                }
+                if(canto == 4) {
+                    el.style.left = '0';
+                    el.style.bottom = '0';
+                }
+            }
+        </script>
+    </body>
+</html>

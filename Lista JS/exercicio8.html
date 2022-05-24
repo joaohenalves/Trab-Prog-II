@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 8</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="commonstyle.css">
+        <style>
+
+            #quadrado {
+                width: 200px;
+                height: 200px;
+                background-color: #222222;
+                outline: 5px solid red;
+                outline-offset: -5px;
+                border-radius: 5px;
+                position: absolute;
+                top: calc(50% - 100px);
+                left: calc(50% - 100px);
+            }
+        
+            #link {
+                width: 140px;
+                height: 75px;
+                background-color: blue;
+                color: #222222;
+                border-radius: 5px;
+                font-size: 30px;
+                font-weight: bold;
+                font-family: Arial;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 15%;
+                left: calc(50% - 70px);
+            }
+
+            #link:hover {
+                background-color: #222222;
+                color: blue;
+                outline: 5px solid blue;
+                outline-offset: -5px;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a href="exercicio7.html"><div class="exc-button" style="left: calc(50% - 105px)">Exercício 7</div></a>
+        <a href="exercicio9.php"><div class="exc-button" style="left: calc(50% + 5px)">Exercício 9</div></a>
+        <div id="link" onclick="iniciaMovimento()">Mover</div>
+        <div id="quadrado"></div>
+        <script>
+
+            var larguraTela = window.innerWidth + 0.01;
+            var el = document.getElementById('quadrado');
+            var cliques = 0;
+            var moveEsquerda = true;
+            window.onresize = atualizaLarguraTela;
+    
+            function iniciaMovimento() {
+                cliques++;
+                if(cliques % 2 != 0) {
+                    controle = setInterval(moveQuadrado, 50);
+                } else {
+                    clearInterval(controle);
+                }
+            }
+    
+            function moveQuadrado() {
+                let posQuadrado = el.getBoundingClientRect();
+                if(posQuadrado.left < larguraTela/100) {
+                    moveEsquerda = false;
+                } else if(posQuadrado.left > larguraTela - larguraTela/100 - 200) {
+                    moveEsquerda = true;
+                }
+                if(moveEsquerda) {
+                    el.style.left = `${posQuadrado.left - larguraTela/100}px`;
+                } else {
+                    el.style.left = `${posQuadrado.left + larguraTela/100}px`;
+                }
+            }
+
+            function atualizaLarguraTela() {
+                larguraTela = window.innerWidth + 0.01;
+            }
+
+        </script>
+    </body>
+</html>

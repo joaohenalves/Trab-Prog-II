@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 7</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="commonstyle.css">
+        <style>
+
+            .quadrado {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                top: calc(50% - 100px);
+                cursor: pointer
+            }
+
+            #title-div {
+                color: rgb(255, 187, 0);
+                font-size: 50px;
+                font-weight: bold;
+                font-family: Arial;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 330px;
+                position: absolute;
+                top: 150px;
+                left: calc(50% - 165px);
+            }
+
+        </style>
+    </head>
+    <body>
+        <a href="exercicio6.php"><div class="exc-button" style="left: calc(50% - 105px)">Exercício 6</div></a>
+        <a href="exercicio8.html"><div class="exc-button" style="left: calc(50% + 5px)">Exercício 8</div></a>
+        <div id="title-div"></div>
+        <div>
+            <div style="left: calc(50% - 330px)" class="quadrado" onclick="verificaQuadrado(1)"></div>
+            <div style="left: calc(50% - 100px)" class="quadrado" onclick="verificaQuadrado(2)"></div>
+            <div style="left: calc(50% + 130px)" class="quadrado" onclick="verificaQuadrado(3)"></div>
+        </div>
+        <script>
+
+            var random = Math.random();
+            var elementsArray = document.querySelectorAll('.quadrado');
+            var seed = ['', '', ''];
+            var flag = false;
+            var controle = setTimeout(verificaQuadrado, 1000 * 10, -1);
+    
+            if(random < 0.33) {
+                seed[0] = 'blue';
+                random = Math.random();
+                if(random <= 0.49) {seed[1] = 'red'; seed[2] = 'green';} else {seed[1] = 'green'; seed[2] = 'red';}
+            }
+            else if(random >= 0.33 && random < 0.66) {
+                seed[1] = 'blue';
+                random = Math.random();
+                if(random <= 0.49) {seed[0] = 'red'; seed[2] = 'green';} else {seed[0] = 'green'; seed[2] = 'red';}
+            }
+            else if(random >= 0.66) {
+                seed[2] = 'blue';
+                random = Math.random();
+                if(random <= 0.49) {seed[0] = 'red'; seed[1] = 'green';} else {seed[0] = 'green'; seed[1] = 'red';}
+            }
+    
+            elementsArray[0].style.backgroundColor = seed[0];
+            elementsArray[1].style.backgroundColor = seed[1];
+            elementsArray[2].style.backgroundColor = seed[2];
+    
+            function verificaQuadrado(opcao) {
+                if(!flag) {
+                    if((opcao == 1 && seed[0] == 'blue') || (opcao == 2 && seed[1] == 'blue') || (opcao == 3 && seed[2] == 'blue')) {
+                        document.getElementById('title-div').innerText = 'Você venceu!';
+                    } else if (opcao == -1) {
+                        document.getElementById('title-div').innerText = 'Você perdeu!';
+                    } else {
+                        document.getElementById('title-div').innerText = 'Quase!';
+                    }
+                    flag = true;
+                    clearTimeout(controle);
+                }
+            }
+        </script>
+    </body>
+</html>

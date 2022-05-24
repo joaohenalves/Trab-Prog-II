@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício 3</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="commonstyle.css">
+        <style>
+
+            #quadrado {
+                position: absolute;
+            }
+        
+            .link-button {
+                width: 140px;
+                height: 75px;
+                background-color: rgb(255, 187, 0);
+                color: #222222;
+                border-radius: 5px;
+                font-size: 30px;
+                font-weight: bold;
+                font-family: Arial;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .link-button:hover {
+                background-color: #222222;
+                color: rgb(255, 187, 0);
+                outline: 3px solid rgb(255, 187, 0);
+                outline-offset: -3px;
+                cursor: pointer;
+            }
+
+            #buttons-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a href="exercicio2.html"><div class="exc-button" style="left: calc(50% - 105px)">Exercício 2</div></a>
+        <a href="exercicio4.html"><div class="exc-button" style="left: calc(50% + 5px)">Exercício 4</div></a>
+        <div id="buttons-container">
+            <div id="link1" class="link-button" onclick="mudaQuadrado(1)">Link 1</div>
+            <div id="link2" class="link-button" onclick="mudaQuadrado(2)">Link 2</div>
+        </div>
+        <div id="quadrado"></div>
+        <script>
+            function mudaQuadrado(option) {
+                var el = document.getElementById('quadrado');
+                if(option == 1) {
+                    el.style.cssText =
+                    'width: 400px;' +
+                    'height: 300px;' +
+                    'background-color: red;';
+                }
+                if(option == 2) {
+                    el.style.cssText =
+                    'width: 200px;' +
+                    'height: 200px;' +
+                    'background-color: blue;' +
+                    'top: calc(50% - 100px);' +
+                    'left: calc(50% - 100px);';
+                }
+            }
+        </script>
+    </body>
+</html>
