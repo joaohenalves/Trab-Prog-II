@@ -40,15 +40,15 @@ if(isset($_POST['dominio'])) {
     <p>Faz a soma dos IDs dos usuários que possuem email pertencente ao domínio informado.</p>
 </div>
 <div class="default-container centralize-elements">
-<div class="login-wrapper centralize-elements">
-    <form action="index.php?p=exercicio14" method="POST">
-        <label>Domínio</label>
-        <input type="text" name="dominio">
-        <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-            <div class="inner-button centralize-elements">Buscar</div>
-        </button>
-    </form>
-</div>
+    <div class="login-wrapper centralize-elements">
+        <form action="index.php?p=exercicio14" method="POST">
+            <label>Domínio</label>
+            <input type="text" name="dominio">
+            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
+                <div class="inner-button centralize-elements">Buscar</div>
+            </button>
+        </form>
+    </div>
 </div>
 
 <?php

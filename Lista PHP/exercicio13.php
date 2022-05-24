@@ -43,6 +43,7 @@ try {
 <div class="default-container">
     <h3>Exercício 13</h3>
     <p>Recebe um ID via GET e atualiza as informações do usuário.</p>
+    <p>Este exercício está integrado com o exercício 10, que pode ser acessado <a href="index.php?p=exercicio10">aqui.</a></p>
 </div>
 
 <?php 

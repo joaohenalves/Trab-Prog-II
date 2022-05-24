@@ -32,15 +32,15 @@ if(isset($_POST['email']) && strlen($_POST['email']) != 0) {
     <p>Busca informações do usuário cujo email e igual ao email informado.</p>
 </div>
 <div class="default-container centralize-elements">
-<div class="login-wrapper centralize-elements">
-    <form action="index.php?p=exercicio11" method="POST">
-        <label>Email</label>
-        <input type="email" name="email">
-        <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-            <div class="inner-button centralize-elements">Buscar</div>
-        </button>
-    </form>
-</div>
+    <div class="login-wrapper centralize-elements">
+        <form action="index.php?p=exercicio11" method="POST">
+            <label>Email</label>
+            <input type="email" name="email">
+            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
+                <div class="inner-button centralize-elements">Buscar</div>
+            </button>
+        </form>
+    </div>
 </div>
 
 <?php

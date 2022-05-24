@@ -33,19 +33,19 @@ if(isset($_POST['nome']) && isset($_POST['idMin']) && isset($_POST['idMax'])) {
     <p>Atualiza os nomes de todos os usuarios cujos IDs estão fora do intervalo ID min e ID max para o nome informado </p>
 </div>
 <div class="default-container centralize-elements">
-<div class="login-wrapper centralize-elements">
-    <form action="index.php?p=exercicio15" method="POST">
-        <label>Novo Nome</label>
-        <input type="text" name="nome">
-        <label>ID min</label>
-        <input type="text" name="idMin">
-        <label>ID max</label>
-        <input type="text" name="idMax">
-        <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-            <div class="inner-button centralize-elements">Atualizar</div>
-        </button>
-    </form>
-</div>
+    <div class="login-wrapper centralize-elements">
+        <form action="index.php?p=exercicio15" method="POST">
+            <label>Novo Nome</label>
+            <input type="text" name="nome">
+            <label>ID min</label>
+            <input type="text" name="idMin">
+            <label>ID max</label>
+            <input type="text" name="idMax">
+            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
+                <div class="inner-button centralize-elements">Atualizar</div>
+            </button>
+        </form>
+    </div>
 </div>
 
 <?php

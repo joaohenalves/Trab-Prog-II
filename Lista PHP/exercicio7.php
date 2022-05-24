@@ -47,19 +47,19 @@ if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha'])) {
     <p>Cadastra no banco de dados o usuário apenas se o email informado ainda não estiver cadastrado.</p>
 </div>
 <div class="default-container centralize-elements">
-<div class="login-wrapper centralize-elements">
-    <form action="index.php?p=exercicio7" method="POST">
-        <label>Nome</label>
-        <input type="text" name="nome">
-        <label>Email</label>
-        <input type="email" name="email">
-        <label>Senha</label>
-        <input type="password" name="senha">
-        <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-            <div class="inner-button centralize-elements">Cadastrar</div>
-        </button>
-    </form>
-</div>
+    <div class="login-wrapper centralize-elements">
+        <form action="index.php?p=exercicio7" method="POST">
+            <label>Nome</label>
+            <input type="text" name="nome">
+            <label>Email</label>
+            <input type="email" name="email">
+            <label>Senha</label>
+            <input type="password" name="senha">
+            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
+                <div class="inner-button centralize-elements">Cadastrar</div>
+            </button>
+        </form>
+    </div>
 </div>
 
 <?php

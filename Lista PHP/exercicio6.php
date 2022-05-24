@@ -32,17 +32,17 @@ if(isset($_POST['idMin']) && isset($_POST['idMax'])) {
     <p>Apaga os usuários cujos ids sejam iguais ou maiores que ID min e menor ou iguais a ID max.</p>
 </div>
 <div class="default-container centralize-elements">
-<div class="login-wrapper centralize-elements">
-    <form action="index.php?p=exercicio6" method="POST">
-        <label>ID min</label>
-        <input type="text" name="idMin">
-        <label>ID max</label>
-        <input type="text" name="idMax">
-        <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-            <div class="inner-button centralize-elements">Deletar</div>
-        </button>
-    </form>
-</div>
+    <div class="login-wrapper centralize-elements">
+        <form action="index.php?p=exercicio6" method="POST">
+            <label>ID min</label>
+            <input type="text" name="idMin">
+            <label>ID max</label>
+            <input type="text" name="idMax">
+            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
+                <div class="inner-button centralize-elements">Deletar</div>
+            </button>
+        </form>
+    </div>
 </div>
 
 <?php

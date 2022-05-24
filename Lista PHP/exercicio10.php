@@ -22,6 +22,7 @@ try {
 <div class="default-container">
     <h3>Exercício 10</h3>
     <p>Lista todos os usuários existentes no banco de dados.</p>
+    <p>Cada nome de usuário é um link para a alteração de seus dados (exercício 13)</p>
 </div>
 <div class="default-container">
     <h3>Resultados:</h3>

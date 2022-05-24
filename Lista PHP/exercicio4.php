@@ -32,17 +32,17 @@ if(isset($_POST['id']) && isset($_POST['nome'])) {
     <p>Atualiza o nome do usuário que possui o ID informado.</p>
 </div>
 <div class="default-container centralize-elements">
-<div class="login-wrapper centralize-elements">
-    <form action="index.php?p=exercicio4" method="POST">
-        <label>ID</label>
-        <input type="text" name="id">
-        <label>Novo Nome</label>
-        <input type="text" name="nome">
-        <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-            <div class="inner-button centralize-elements">Atualizar</div>
-        </button>
-    </form>
-</div>
+    <div class="login-wrapper centralize-elements">
+        <form action="index.php?p=exercicio4" method="POST">
+            <label>ID</label>
+            <input type="text" name="id">
+            <label>Novo Nome</label>
+            <input type="text" name="nome">
+            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
+                <div class="inner-button centralize-elements">Atualizar</div>
+            </button>
+        </form>
+    </div>
 </div>
 
 <?php

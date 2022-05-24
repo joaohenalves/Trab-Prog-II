@@ -32,15 +32,15 @@ if(isset($_POST['dominio']) && strlen($_POST['dominio']) > 0) {
     <p>Apaga os usuários que possuem email pertencente ao domínio informado.</p>
 </div>
 <div class="default-container centralize-elements">
-<div class="login-wrapper centralize-elements">
-    <form action="index.php?p=exercicio12" method="POST">
-        <label>Domínio</label>
-        <input type="text" name="dominio">
-        <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
-            <div class="inner-button centralize-elements">Deletar</div>
-        </button>
-    </form>
-</div>
+    <div class="login-wrapper centralize-elements">
+        <form action="index.php?p=exercicio12" method="POST">
+            <label>Domínio</label>
+            <input type="text" name="dominio">
+            <button type="submit" style="margin: 0px auto 0px auto" class="centralize-elements">
+                <div class="inner-button centralize-elements">Deletar</div>
+            </button>
+        </form>
+    </div>
 </div>
 
 <?php
