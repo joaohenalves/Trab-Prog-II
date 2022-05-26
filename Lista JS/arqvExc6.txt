@@ -1,1 +1,1 @@
-{"recipient":"testemail@gmail.com","subject":"Test Subject","message":"Test email AJAX"}
+{"recipient":"ghjdfg","subject":"çjçl","message":"kkkkkkkkkkkkk"}

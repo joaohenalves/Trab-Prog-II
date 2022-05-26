@@ -10,18 +10,11 @@
                 height: 150vh;
             }
 
-            .centraliza {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
             #compose-button {
                 width: 150px;
                 height: 50px;
                 background-color: rgb(238, 90, 4);
                 color: white;
-                font-family: Arial;
                 font-style: bold;
                 font-size: 20px;
                 border-radius: 3px;
@@ -32,12 +25,11 @@
                 top: 30px;
                 left: 30px;
                 cursor: pointer;
-
             }
 
             #new-message {
                 width: 500px;
-                height: 600px;
+                height: fit-content;
                 background-color: white;
                 position: fixed;
                 bottom: 2px;
@@ -45,7 +37,6 @@
                 border-style: solid;
                 border-width: 2px;
                 border-color: gray;
-                font-family: Arial;
                 display: none;
             }
 
@@ -66,6 +57,7 @@
                 position: absolute;
                 right: 20px;
                 font-weight: bold;
+                transition: all 0.3s
             }
 
             .window-button:hover {
@@ -73,26 +65,25 @@
             }
 
             input[type=text] {
+                all: unset;
                 height: 50px;
-                width: 478px;
+                width: 100%;
                 padding-left: 20px;
-                border: initial;
                 border-bottom: 1px solid #AAAAAA;
-
             }
 
             #message-text {
+                all: unset;
                 height: 380px;
-                width: 458px;
-                border-color: #AAAAAA;
-                font-family: Arial;
+                width: 100%;
+                border-bottom: 1px solid #AAAAAA;
                 padding: 20px;
             }
 
             #send-button {
                 width: 120px;
                 height: 35px;
-                margin-left: 5px;
+                margin: 5px;
                 background-color: rgb(0, 89, 255);
                 color: white;
                 cursor: pointer;
@@ -102,7 +93,6 @@
             #aviso-msg {
                 width: 200px;
                 height: 40px;
-                font-family: Arial;
                 font-size: 17px;
                 position: fixed;
                 bottom: 10px;
@@ -115,22 +105,22 @@
         </style>
     </head>
     <body>
-        <div class="exc-buttons-cont center">
-            <a href="exercicio5.php"><div class="exc-button center">Exercício 5</div></a>
+        <div class="default-container center">
+            <a href="exercicio5.html"><div class="exc-button center">Exercício 5</div></a>
             <a href="exercicio7.html"><div class="exc-button center">Exercício 7</div></a>
         </div>
-        <div class="centraliza" id="compose-button" onclick="mostraNewMessage()">Compose</div>
+        <div class="center" id="compose-button" onclick="mostraNewMessage()">Compose</div>
         <div id="new-message">
             <div id="new-message-header">
                 <p>New Message</p>
-                <p class="window-button centraliza" onclick="escondeNewMessage()">X</p>
+                <p class="window-button center" onclick="escondeNewMessage()">X</p>
             </div>
             <input type="text" placeholder="Recipients" id="recipient">
             <input type="text" placeholder="Subject" id="subject">
             <textarea type="text" id="message-text"></textarea>
-            <div class="centraliza" id="send-button" onclick="enviaMensagem()">Send</div>
+            <div class="center" id="send-button" onclick="enviaMensagem()">Send</div>
         </div>
-        <div class="centraliza" id="aviso-msg">Mensagem enviada!</div>
+        <div class="center" id="aviso-msg">Mensagem enviada!</div>
         <script>
 
             function enviaMensagem() {
@@ -154,6 +144,9 @@
                 escondeNewMessage();
 
                 document.getElementById('aviso-msg').style.display = 'flex';
+                document.getElementById('recipient').value = '';
+                document.getElementById('subject').value = '';
+                document.getElementById('message-text').value = '';
                 setTimeout(removeAviso, 1000 * 5);
 
             }

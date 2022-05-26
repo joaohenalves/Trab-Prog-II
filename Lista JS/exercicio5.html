@@ -6,23 +6,14 @@
         <link rel="stylesheet" type="text/css" href="commonstyle.css">
         <style>
 
-            .common {
+            * {
                 color: white;
-                font-family: Arial;
-                display: flex;
-                align-items: center;
-                justify-content: center;
             }
 
             .title-text {
-                color: white;
-                font-family: Arial;
                 font-size: 50px;
                 height: 200px;
                 width: 100vw;
-                display: flex;
-                align-items: center;
-                justify-content: center;
             }
 
             .conteudo {
@@ -59,11 +50,11 @@
         </style>
     </head>
     <body>
-        <div class="exc-buttons-cont center">
+        <div class="default-container center">
             <a href="exercicio4.html"><div class="exc-button center">Exercício 4</div></a>
-            <a href="exercicio6.php"><div class="exc-button center">Exercício 6</div></a>
+            <a href="exercicio6.html"><div class="exc-button center">Exercício 6</div></a>
         </div>
-        <div class="title-text common">Chat</div>
+        <div class="title-text center">Chat</div>
         <div id="gtalk"></div>
         <script>
 
@@ -79,7 +70,7 @@
                         document.getElementById('gtalk').innerHTML = '';
                         for(var i = 0; i < 4; i++) {
                             document.getElementById('gtalk').innerHTML +=
-                            `<div class="common conteudo">` +
+                            `<div class="conteudo">` +
                                 `<img src="${dados.contacts[i].icon}" style="float: left; margin-top: 3px">` +
                                 `<div style="float: right">` +
                                     `<p class="nome">${dados.contacts[i].name}</p>` +
