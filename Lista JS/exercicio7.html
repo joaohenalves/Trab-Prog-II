@@ -16,26 +16,21 @@
 
             #title-div {
                 color: rgb(255, 187, 0);
-                font-size: 50px;
+                font-size: 30px;
                 font-weight: bold;
-                font-family: Arial;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 330px;
+                width: 100%;
                 position: absolute;
                 top: 150px;
-                left: calc(50% - 165px);
             }
 
         </style>
     </head>
     <body>
-        <div class="exc-buttons-cont center">
+        <div class="default-container center">
             <a href="exercicio6.html"><div class="exc-button center">Exercício 6</div></a>
             <a href="exercicio8.html"><div class="exc-button center">Exercício 8</div></a>
         </div>
-        <div id="title-div"></div>
+        <div id="title-div" class="center">Clique no quadrado azul antes de 10 seg!</div>
         <div>
             <div style="left: calc(50% - 330px)" class="quadrado" onclick="verificaQuadrado(1)"></div>
             <div style="left: calc(50% - 100px)" class="quadrado" onclick="verificaQuadrado(2)"></div>

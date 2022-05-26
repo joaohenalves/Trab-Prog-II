@@ -26,13 +26,10 @@
                 border-radius: 5px;
                 font-size: 30px;
                 font-weight: bold;
-                font-family: Arial;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 position: absolute;
                 top: 15%;
                 left: calc(50% - 70px);
+                transition: all 0.3s;
             }
 
             #link:hover {
@@ -46,11 +43,11 @@
         </style>
     </head>
     <body>
-        <div class="exc-buttons-cont center">
+        <div class="default-container center">
             <a href="exercicio7.html"><div class="exc-button center">Exercício 7</div></a>
             <a href="exercicio9.php"><div class="exc-button center">Exercício 9</div></a>
         </div>
-        <div id="link" onclick="iniciaMovimento()">Mover</div>
+        <div id="link" class="center" onclick="iniciaMovimento()">Mover</div>
         <div id="quadrado"></div>
         <script>
 
