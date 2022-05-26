@@ -19,11 +19,8 @@
                 font-size: 30px;
                 font-weight: bold;
                 font-family: Arial;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-left: 10px;
-                margin-right: 10px;
+                margin: 0px 10px 0px 10px;
+                transition: background-color 0.5s, color 0.5s;
             }
 
             .link-button:hover {
@@ -34,23 +31,16 @@
                 cursor: pointer;
             }
 
-            #buttons-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 200px;
-            }
-
         </style>
     </head>
     <body>
-        <div class="exc-buttons-cont center">
+        <div class="default-container center">
             <a href="exercicio2.html"><div class="exc-button center">Exercício 2</div></a>
             <a href="exercicio4.html"><div class="exc-button center">Exercício 4</div></a>
         </div>
-        <div id="buttons-container">
-            <div id="link1" class="link-button" onclick="mudaQuadrado(1)">Link 1</div>
-            <div id="link2" class="link-button" onclick="mudaQuadrado(2)">Link 2</div>
+        <div class="default-container center">
+            <div id="link1" class="link-button center" onclick="mudaQuadrado(1)">Link 1</div>
+            <div id="link2" class="link-button center" onclick="mudaQuadrado(2)">Link 2</div>
         </div>
         <div id="quadrado"></div>
         <script>
@@ -67,8 +57,8 @@
                     'width: 200px;' +
                     'height: 200px;' +
                     'background-color: blue;' +
-                    'top: calc(50% - 100px);' +
-                    'left: calc(50% - 100px);';
+                    'top: calc(50vh - 100px);' +
+                    'left: calc(50vw - 100px);';
                 }
             }
         </script>
