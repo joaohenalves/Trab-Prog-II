@@ -16,6 +16,8 @@
                 outline: 3px solid rgb(255, 187, 0);
                 outline-offset: -3px;
                 position: absolute;
+                top: 0vh;
+                left: 0vw;
             }
             .quadradinho {
                 height: 25px;
@@ -29,7 +31,7 @@
         </style>
     </head>
     <body>
-        <div class="exc-buttons-cont center">
+        <div class="default-container center">
             <a href="exercicio1.html"><div class="exc-button center">Exercício 1</div></a>
             <a href="exercicio3.html"><div class="exc-button center">Exercício 3</div></a>
         </div>
@@ -43,14 +45,14 @@
             function deslocaQuadrado(canto) {
                 var el = document.getElementById('quadrado');
                 if(canto == 1 || canto == 4) {
-                    el.style.left = '0';
+                    el.style.left = '0vw';
                 } else {
-                    el.style.left = 'calc(100% - 200px)';
+                    el.style.left = 'calc(100vw - 200px)';
                 }
                 if(canto == 1 || canto == 2) {
-                    el.style.top = '0';
+                    el.style.top = '0vh';
                 } else {
-                    el.style.top = 'calc(100% - 200px)'
+                    el.style.top = 'calc(100vh - 200px)'
                 }
             }
         </script>

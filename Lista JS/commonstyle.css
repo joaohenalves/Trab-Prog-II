@@ -20,15 +20,6 @@ body {
     height: fit-content;
 }
 
-.exc-buttons-cont {
-    position: absolute;
-    top: 0px;
-    left: calc(50% - 75px);
-    padding: 10px 0px 10px 0px;
-    height: fit-content;
-    width: 140px;
-}
-
 .exc-button {
     width: 100px;
     height: 20px;
@@ -36,7 +27,8 @@ body {
     color: white;
     font-family: Arial;
     font-weight: bold;
-    border: solid 1px white;
+    outline: 1px solid white;
+    outline-offset: -1px;
     border-radius: 2px;
     margin: 0px 10px 0px 10px;
 }
